@@ -1,0 +1,30 @@
+{
+  "name": "poker-hand-ts",
+  "version": "0.1.0",
+  "description": "Cactus Kev's poker hand evaluator in TypeScript",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "generate": "npx tsx scripts/generate-tables.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^2.0.0"
+  }
+}
