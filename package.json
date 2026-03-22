@@ -19,6 +19,7 @@
     "generate": "npx tsx scripts/generate-tables.ts",
     "test": "vitest run",
     "test:watch": "vitest",
+    "bench": "vitest bench",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
