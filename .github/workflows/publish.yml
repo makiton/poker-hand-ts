@@ -29,8 +29,6 @@ jobs:
       - run: npm test
       - run: npm run build
 
-      # --provenance links the published package to this exact commit and workflow run,
-      # allowing consumers to verify the build origin (npm provenance / SLSA level 2).
+      # Trusted Publisher uses OIDC (id-token: write above) — no NPM_TOKEN secret needed.
+      # --provenance links the published package to this exact commit and workflow run.
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
