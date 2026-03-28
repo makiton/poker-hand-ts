@@ -2,6 +2,23 @@
   "name": "poker-hand-ts",
   "version": "0.1.0",
   "description": "Cactus Kev's poker hand evaluator in TypeScript",
+  "license": "MIT",
+  "keywords": ["poker", "hand-evaluator", "cactus-kev", "cards", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makiton/poker-hand-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/makiton/poker-hand-ts/issues"
+  },
+  "homepage": "https://github.com/makiton/poker-hand-ts#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
